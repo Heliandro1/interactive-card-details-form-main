@@ -12,15 +12,20 @@
 <body>
 
   <main>
-    <div class="card-back">
-      <p id="cardCvc">000</p>
-    </div>
-    
-    <div class="card-front">
-      <p id="cardNumber"><strong>0000 0000 0000 0000</strong></p>
-      <p id="cardHolder">Jane Appleseed</p>
-      00/00
-    </div>
+    <section class="cards-container">
+      <div class="card-back">
+        <p id="cardCvc">000</p>
+      </div>
+      
+      <div class="card-front">
+        <div class="logo"></div>
+        <p id="cardNumber">0000 0000 0000 0000</p>
+        <div>
+          <p id="cardHolder">Jane Appleseed</p>
+          <p id="date">00/00</p>
+        </div>
+      </div>
+    </section>
     
     <form action="#" method="post">
       <div class="field">
@@ -29,13 +34,13 @@
         <p class="error">Wrong format, numbers only</p>
       </div>
       
-      <div class="number">
+      <div class="field">
         <label for="fieldCardNumber">Card Number</label>
         <input type="text" name="num" id="fieldCardNumber" placeholder="e.g. 1234 5678 9123 0000">
         <p class="error">Wrong format, numbers only</p>
       </div>
 
-      <div class="">
+      <div class="field-container">
         <div class="field">
           <label for="month">Exp. Date (MM/YY)</label>
           <div>
@@ -51,12 +56,12 @@
 
      <input type="submit" value="Confirm" id="btnConfirm">
     </form>
-    <!-- Completed state start
+     <!-- Completed state start
     <section>
       Thank you!
       We've added your card details
       Continue
-    </section>
+    </section> -->
   </main>
   
   <footer class="attribution">

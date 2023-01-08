@@ -13,9 +13,72 @@
     --Red: hsl(0, 100%, 66%);
     --input-border: linear-gradient: (hsl(249, 99%, 64%) to hsl(278, 94%, 30%))
 }
-
+body, html{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+main{
+    min-width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+section.cards-container{
+    height: 13em;
+    min-width: 100vw;
+    background: transparent url('../images/bg-main-mobile.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.cards-container > div.card-back{
+    position: absolute;
+    height: 10em;
+    min-width: 80%;
+    background: transparent url('../images/bg-card-back.png') no-repeat;
+    background-size: contain;
+    transform: translate(1.5em, 1em);
+    flex-shrink: 0;
+    color: var(--white);
+}
+section.cards-container > div.card-front{
+    position: absolute;
+    height: 10em;
+    min-width: 80%;
+    padding: 1em;
+    color: var(--white);
+    background: transparent url('../images/bg-card-front.png') no-repeat;
+    background-size: cover;
+    transform: translate(-1.5em, 6.5em);
+    border-radius: 0.5em;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+p#cardCvc{
+    transform: translate();
+}
+div.card-front > div.logo{
+    height: 2em;
+    width: 100%;
+    background: transparent url('../images/card-logo.svg') no-repeat;
+    background-size: contain;
+    align-self: flex-start;
+}
+p#cardNumber{
+    font-size: 1.2rem;
+}
+div.card-front > div:not(div.logo){
+    display: flex;
+    justify-content: space-between;
+    justify-self: flex-end;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
 .attribution { font-size: 11px; text-align: center; 
-position: absolute;
+position: fixed;
 bottom: 0;
 width: 100%;
  
