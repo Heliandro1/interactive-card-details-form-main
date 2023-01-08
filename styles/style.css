@@ -1,13 +1,17 @@
+ @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 *{
     box-sizing: border-box;
     margin: 0em;
     padding: 0em;
+    font-family: 'Space Grotesk', sans-serif;
 }
 :root{
     --white:  hsl(0, 0%, 100%);
     --Light-grayish-violet: hsl(270, 3%, 87%);
     --Dark-grayish-violet: hsl(279, 6%, 55%);
     --Very-dark-violet: hsl(278, 68%, 11%);
+    --Red: hsl(0, 100%, 66%);
+    --input-border: linear-gradient: (hsl(249, 99%, 64%) to hsl(278, 94%, 30%))
 }
 
 
@@ -15,5 +19,6 @@
 position: absolute;
 bottom: 0;
 width: 100%;
+ 
 }
 .attribution a { color: hsl(228, 45%, 44%); }
