@@ -3,7 +3,12 @@
     margin: 0em;
     padding: 0em;
 }
-
+:root{
+    --white:  hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
 
 
 .attribution { font-size: 11px; text-align: center; 
