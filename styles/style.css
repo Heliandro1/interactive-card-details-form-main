@@ -1,2 +1,14 @@
-.attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+*{
+    box-sizing: border-box;
+    margin: 0em;
+    padding: 0em;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; 
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
