@@ -58,7 +58,8 @@ section.cards-container > div.card-front{
     justify-content: space-between;
 }
 p#cardCvc{
-    transform: translate();
+    transform: translate(12em, 3.6em);
+    width: fit-content;
 }
 div.card-front > div.logo{
     height: 2em;
