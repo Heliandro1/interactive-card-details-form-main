@@ -78,6 +78,26 @@ div.card-front > div:not(div.logo){
     font-size: 0.7rem;
     text-transform: uppercase;
 }
+form{
+    width: 100%;
+    height: auto;
+    padding: 5em 1em 0em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+div.field{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+label{
+    text-transform: uppercase;
+}
+input[type="text"]{
+    height: 3em;
+    border-radius: 0.5em;
+}
 .attribution { font-size: 11px; text-align: center; 
 position: fixed;
 bottom: 0;
