@@ -35,7 +35,7 @@ section.cards-container{
 section.cards-container > div.card-back{
     position: absolute;
     height: 10em;
-    min-width: 80%;
+    width: 17em;
     background: transparent url('../images/bg-card-back.png') no-repeat;
     background-size: contain;
     transform: translate(1.5em, 1em);
@@ -45,7 +45,7 @@ section.cards-container > div.card-back{
 section.cards-container > div.card-front{
     position: absolute;
     height: 10em;
-    min-width: 80%;
+    width: 17em;
     padding: 1em;
     color: var(--white);
     background: transparent url('../images/bg-card-front.png') no-repeat;
