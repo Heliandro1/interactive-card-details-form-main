@@ -3,14 +3,27 @@
         flex-direction: row;
     }
     section.cards-container{
-        height: 13em;
-        min-width: 50%;
-        background: transparent url('../images/bg-main-mobile.png') no-repeat;
+        height: 100vh;
+        min-width: 30%;
+        background: transparent url('../images/bg-main-desktop.png') no-repeat;
         background-size: cover;
         display: flex;
         flex-direction: column;
         align-items: center;
 
+    }
+    section.cards-container > div.card-front{
+        transform: translate(10em, 10em);
+        width: 23em;
+        height: 12em;
+    }
+    section.cards-container > div.card-back{
+        transform: translate(15em, 23.5em);
+        width: 23em;
+        height: 12em;
+    }
+    p#cardCvc{
+        transform: translate(17em, 5.3em);
     }
 
 }
