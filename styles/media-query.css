@@ -4,7 +4,7 @@
     }
     section.cards-container{
         height: 13em;
-        width: 20em;
+        min-width: 50%;
         background: transparent url('../images/bg-main-mobile.png') no-repeat;
         background-size: cover;
         display: flex;
