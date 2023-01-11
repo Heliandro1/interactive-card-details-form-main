@@ -19,7 +19,7 @@ body, html{
 }
 main{
     min-width: 100vw;
-    height: auto;
+    min-height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -82,26 +82,55 @@ form{
     width: 100%;
     height: auto;
     padding: 5em 1em 0em 1em;
+    margin-bottom: 1em;
     display: flex;
     flex-direction: column;
     gap: 1em;
+}
+p.error{
+    font-size: 0.8rem;
+    color: var(--Red);
 }
 div.field{
     display: flex;
     flex-direction: column;
     gap: 0.5em;
 }
+div.field-container{
+    display: flex;
+    gap: 1em;
+}
+div.field-container > div.field > div{
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 1em;
+}
+div.field-container > div.field > div > input{
+    width: 4em;
+}
 label{
     text-transform: uppercase;
+    font-size: 0.8rem;
 }
 input[type="text"]{
     height: 3em;
     border-radius: 0.5em;
+    padding: 0.6em;
 }
-.attribution { font-size: 11px; text-align: center; 
-position: fixed;
-bottom: 0;
-width: 100%;
- 
+input[name="cvc"]{
+    width: 11.2em;
 }
+input[type="submit"]{
+    height: 3.5em;
+    border-radius: 0.5em;
+    background-color: var(--Very-dark-violet);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    color: var(--Dark-grayish-violet);
+}
+.attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
