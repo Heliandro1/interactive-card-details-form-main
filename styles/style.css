@@ -58,7 +58,7 @@ section.cards-container > div.card-front{
     justify-content: space-between;
 }
 p#cardCvc{
-    transform: translate(12em, 3.6em);
+    transform: translate(12em, 3.9em);
     width: fit-content;
 }
 div.card-front > div.logo{
@@ -99,6 +99,8 @@ div.field{
 div.field-container{
     display: flex;
     gap: 1em;
+    width: 100%;
+    height: auto;
 }
 div.field-container > div.field > div{
     display: flex;
@@ -109,9 +111,13 @@ div.field-container > div.field > div{
 div.field-container > div.field > div > input{
     width: 4em;
 }
+div.field:has(input[name="cvc"]){
+    min-width: 30%;
+}
 label{
     text-transform: uppercase;
     font-size: 0.8rem;
+    color: var(--Very-dark-violet);
 }
 input[type="text"]{
     height: 3em;
@@ -122,9 +128,6 @@ input[type="text"]{
 }
 input[type="text"]::placeholder{
     color: var(--Light-grayish-violet);
-}
-input[name="cvc"]{
-    width: 11.2em;
 }
 input[type="submit"]{
     height: 3.5em;
