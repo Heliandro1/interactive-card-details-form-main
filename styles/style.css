@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 *{
     box-sizing: border-box;
     margin: 0em;
@@ -35,7 +35,7 @@ section.cards-container{
 section.cards-container > div.card-back{
     position: absolute;
     height: 10em;
-    width: 17em;
+    min-width: 15em;
     background: transparent url('../images/bg-card-back.png') no-repeat;
     background-size: contain;
     transform: translate(1.5em, 1em);
@@ -45,7 +45,7 @@ section.cards-container > div.card-back{
 section.cards-container > div.card-front{
     position: absolute;
     height: 10em;
-    width: 17em;
+    min-width: 15em;
     padding: 1em;
     color: var(--white);
     background: transparent url('../images/bg-card-front.png') no-repeat;
@@ -112,8 +112,12 @@ div.field-container > div.field > div > input{
     width: 4em;
 }
 div.field:has(input[name="cvc"]){
-    min-width: 30%;
+    width: 100%;
 }
+input[name="cvc"]{
+    width: 100%;
+}
+
 label{
     text-transform: uppercase;
     font-size: 0.8rem;
