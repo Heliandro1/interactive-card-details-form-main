@@ -35,24 +35,22 @@ section.cards-container{
 section.cards-container > div.card-back{
     position: absolute;
     height: 10em;
-    min-width: 15em;
+    min-width: 17em;
     background: transparent url('../images/bg-card-back.png') no-repeat;
     background-size: contain;
     transform: translate(1.5em, 1em);
-    flex-shrink: 0;
     color: var(--white);
 }
 section.cards-container > div.card-front{
     position: absolute;
     height: 10em;
-    min-width: 15em;
+    min-width: 17em;
     padding: 1em;
     color: var(--white);
     background: transparent url('../images/bg-card-front.png') no-repeat;
     background-size: cover;
     transform: translate(-1.5em, 6.5em);
     border-radius: 0.5em;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
