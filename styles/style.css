@@ -121,7 +121,7 @@ label{
     font-size: 0.8rem;
     color: var(--Very-dark-violet);
 }
-input[type="text"], input[type="number"]{
+input[type="text"]{
     height: 3em;
     border-radius: 0.5em;
     padding: 0.6em;

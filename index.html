@@ -26,25 +26,25 @@
     </section>
     
     <form action="#" method="post">
-      <div class="field">
+      <div class="field" data-error="false">
         <label for="cardholderName">Cardholder Name</label>
         <input type="text" name="name" id="cardholderName" placeholder="e.g. Jane Appleseed">
       </div>
       
-      <div class="field">
+      <div class="field" data-error="false">
         <label for="fieldCardNumber">Card Number</label>
-        <input type="number" name="num" id="fieldCardNumber" placeholder="e.g. 1234 5678 9123 0000">
+        <input type="text" name="num" id="fieldCardNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
       </div>
 
       <div class="field-container">
-        <div class="field">
+        <div class="field" data-error="false">
           <label for="month">Exp. Date (MM/YY)</label>
           <div>
             <input type="text" name="month" id="month" placeholder="MM" maxlength="2">
             <input type="text" name="year" id="year" placeholder="YY" maxlength="2">
           </div>
         </div>
-        <div class="field">
+        <div class="field" data-error="false">
           <label for="fieldCardCvc">CVC</label>
           <input type="text" name="cvc" id="fieldCardCvc" placeholder=" e.g. 123" maxlength="3">
         </div>
@@ -66,5 +66,6 @@
       Coded by <a href="www.linkedin.com/in/adérito-caxala">Adérito Caxala</a>.
     </div>
   </footer>
+  <script src="js/index.js"></script>
 </body>
 </html>
