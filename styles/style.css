@@ -76,7 +76,7 @@ div.card-front > div:not(div.logo){
     font-size: 0.7rem;
     text-transform: uppercase;
 }
-form{
+form, section.complete{
     width: 100%;
     height: auto;
     padding: 5em 1em 0em 1em;
@@ -84,6 +84,39 @@ form{
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+}
+section.complete > h1{
+    text-transform: uppercase;
+    color: var(--Very-dark-violet);
+    text-align: center;
+}
+section.complete > div.th{
+    background: transparent url('../images/icon-complete.svg') no-repeat;
+    background-size: contain;
+    width: 5em;
+    min-height: 5em;
+    border-radius: 50%;
+    align-self: center;
+}
+section.complete > p{
+    text-align: center;
+    color: var(--Dark-grayish-violet);
+}
+section.complete > a{
+    width: 80%;
+    height: 2.8em;
+    text-decoration: none;
+    text-align: center;
+    color: var(--white);
+    border-radius: 0.5em;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-dark-violet);
+}
+section.complete > a:hover{
+    color: var(--Light-grayish-violet);
 }
 p.error{
     font-size: 0.8rem;
@@ -141,6 +174,43 @@ input[type="submit"]{
 }
 input[type="submit"]:hover{
     color: var(--Dark-grayish-violet);
+}
+div.spinner{
+    min-width:10em;
+    min-height: 7em;
+    position: relative;
+}
+div.dot{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+div.dot::after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--Very-dark-violet);
+}
+div.dot{
+    animation: spin 1.8s infinite;
+}
+@keyframes spin {
+    to{transform: rotate(360deg);}
+}
+div.dot:nth-child(2){
+    animation-delay: 100ms;
+}
+div.dot:nth-child(3){
+    animation-delay: 200ms;
+}
+div.dot:nth-child(4){
+    animation-delay: 300ms;
+}
+div.dot:nth-child(5){
+    animation-delay: 400ms;
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

@@ -26,7 +26,7 @@
     p#cardCvc{
         transform: translate(17em, 5.3em);
     }
-    form{
+    form, section.complete{
         width: 25em;
         align-self: center;
         padding: 0;
@@ -61,7 +61,7 @@
     p#cardCvc{
         transform: translate(17em, 5.3em);
     }
-    form{
+    form, section.complete{
         width: 25em;
         align-self: center;
         padding: 0;
