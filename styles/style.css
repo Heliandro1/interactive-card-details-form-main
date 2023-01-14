@@ -154,14 +154,17 @@ label{
     font-size: 0.8rem;
     color: var(--Very-dark-violet);
 }
-input[type="text"]{
+.input-valid{
     height: 3em;
     border-radius: 0.5em;
     padding: 0.6em;
     border: 0.1em solid var(--Light-grayish-violet);
     font-size: 1em;
 }
-input[type="text"]::placeholder, input[type="number"]::placeholder{
+.input-error{
+    border: 0.1em solid var(--Red);
+}
+.input-valid::placeholder{
     color: var(--Light-grayish-violet);
 }
 input[type="submit"]{

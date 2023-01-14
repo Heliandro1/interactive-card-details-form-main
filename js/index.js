@@ -3,7 +3,7 @@ const cardNumber = document.querySelector("#cardNumber");
 const cardHolder = document.querySelector("#cardHolder");
 const date = document.querySelector("#date");
 const cardCvc = document.querySelector("#cardCvc");
-const fields = document.querySelectorAll("input[type='text']:not(input#fieldCardNumber)");
+const fields = document.querySelectorAll("input[type='text']");
 const btnConfirm = document.querySelector("#btnConfirm");
 window.addEventListener("load", () =>{
     fields.forEach(element => {
@@ -37,7 +37,6 @@ btnConfirm.addEventListener("click", (e) =>{
             <a href="#">Continue</a>
             </section>`
         }, 1000);
-        
     }
 });
 number.addEventListener("input", () =>{
@@ -46,13 +45,8 @@ number.addEventListener("input", () =>{
     values.forEach(element => {
        element.length == 4 ? str += `${element} ` : str += element; 
     });
-    cardNumber.innerText = handleInput(number.value.split(''), cardNumber.innerText.split(''));
     number.value = str;
 });
-function handleInput(inputSource, newInput) {
-    newInput.splice(inputSource.length - 1, 1, inputSource[inputSource.length - 1]);
-    return newInput.join('');
-}
 function fillCardApresentation(e) {
     let oldText = date.innerText.split('/');
     switch (e.target.id) {
@@ -61,6 +55,9 @@ function fillCardApresentation(e) {
             break;
         case 'fieldCardCvc':
             cardCvc.innerText = e.target.value;
+            break;
+        case 'fieldCardNumber':
+            cardNumber.innerText = e.target.value;
             break;
         case 'month':
             oldText.splice(0, 1, e.target.value);
@@ -147,7 +144,7 @@ function ClientCard() {
                 state: false,
                 message: "Can't be blank"
             };
-        }else if(Number(this.year.value.trim()) > 12 || Number(this.year.value.trim()) < 1){
+        }else if(Number(this.year.value.trim()) < 1){
             return {
                 state: false,
                 message: "Invalid Year Number"
@@ -200,7 +197,7 @@ function ClientCard() {
                 field.parentElement.parentElement.lastChild.innerText = errorName;
                 return;
             }
-            field.style.border = '0.1em solid var(--Red);';
+            field.classList.add('input-error');
             field.parentElement.parentElement.dataset.error = 'true';
             field.parentElement.parentElement.append(p);
         }else{
@@ -208,7 +205,7 @@ function ClientCard() {
                 field.parentElement.lastChild.innerText = errorName;
                 return;
             }
-            field.style.border = '0.1em solid var(--Red);';
+            field.classList.add('input-error');
             field.parentElement.dataset.error = 'true';
             field.parentElement.append(p);
         }
@@ -216,11 +213,13 @@ function ClientCard() {
     this.removeError = (field) =>{
         if (!field.parentElement.classList.contains('field')) {
             if (field.parentElement.parentElement.dataset.error == 'true') {
+                field.classList.remove('input-error');
                 field.parentElement.parentElement.dataset.error = 'false';
                 field.parentElement.parentElement.removeChild(field.parentElement.parentElement.lastChild);
             }
         }else{
             if (field.parentElement.dataset.error == 'true') {
+                field.classList.remove('input-error');
                 field.parentElement.dataset.error = 'false';
                 field.parentElement.removeChild(field.parentElement.lastChild);
             }
