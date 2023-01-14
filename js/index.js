@@ -14,6 +14,31 @@ btnConfirm.addEventListener("click", (e) =>{
     e.preventDefault();
     const client = new ClientCard();
     client.verifyFields();
+    if (client.isAllValid) {
+        const main = document.querySelector("main");
+        main.children.item(1).remove();
+        setTimeout(() => {
+            main.innerHTML += ` <section class="complete">
+           <div class="spinner">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </section>`
+        }, 0);
+        setTimeout(() => {
+            main.children.item(1).remove();
+            main.innerHTML += `<section class="complete">
+            <div class="th"></div>
+            <h1>Thank you!</h1>
+            <p>We've added your card details</p>
+            <a href="#">Continue</a>
+            </section>`
+        }, 1000);
+        
+    }
 });
 number.addEventListener("input", () =>{
     let values = number.value.split(' ');
@@ -53,6 +78,7 @@ function ClientCard() {
     this.cvc = document.querySelector("#fieldCardCvc");
     this.year = document.querySelector("#year");
     this.month = document.querySelector("#month");
+    this.isAllValid = false;
     this.isValidNumber = () =>{
         let regex = /\d{4}[\s]\d{4}[\s]\d{4}[\s]\d{4}[\s]/g;
         if(this.number.value.trim() == ''){
@@ -135,6 +161,9 @@ function ClientCard() {
         const validCvc = this.isValidCvc();
         const validMonth = this.isValidMonth();
         const validYear = this.isValidYear();
+        if (validNumber.state && validName.state && validCvc.state && validMonth.state && validYear.state) {
+            this.isAllValid = true;
+        }
         if (!validNumber.state) {
             this.setError(this.number, validNumber.message);
         }else{
